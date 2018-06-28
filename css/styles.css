@@ -195,6 +195,16 @@ nav h1 a {
   padding: 20px;
   text-align: left;
   width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 #restaurants-list .restaurant-img {
@@ -342,14 +352,37 @@ nav h1 a {
 
 /* ====================== Reponsive designs ====================== */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 730px) {
+  /* Restaurant Listing */
+  #restaurants-list li {
+    width: 200px;
+  }
   /* Restaurant Filtering */
   .filter-options h2 {
     display: block;
+    width: 100%;
     text-align: center;
   }
   .filter-options select {
-    width: 100%;
+    width: 80%;
     margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Restaurant Listing */
+  #restaurants-list li {
+    width: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* Restaurant Listing */
+  #restaurants-list li {
+    width: 240px;
+  }
+  /* Restaurant Filtering */
+  .filter-options select {
+    width: 100%;
   }
 }
