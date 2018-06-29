@@ -469,11 +469,6 @@ nav h1 a {
 }
 
 @media only screen and (max-width: 730px) {
-  /* Restaurant Listing */
-  #restaurants-list li {
-    width: 200px;
-  }
-
   /* Restaurant Filtering */
   .filter-options h2 {
     display: block;
@@ -486,19 +481,14 @@ nav h1 a {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  /* Restaurant Listing */
-  #restaurants-list li {
-    width: 270px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 650px) {
   /* Restaurant Listing */
   #restaurants-list li {
     width: 240px;
   }
+}
 
+@media only screen and (max-width: 400px) {
   /* Restaurant Filtering */
   .filter-options select {
     width: 100%;
