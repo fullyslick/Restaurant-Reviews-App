@@ -10,10 +10,14 @@
   box-sizing: border-box;
   outline: 0;
 }
+
 ol, ul {
-        list-style: none;
+  list-style: none;
 }
-html { font-size:100.01%; }
+
+html {
+  font-size: 100.01%;
+}
 
 body, td, th, p {
   font-family: Arial, Helvetica, sans-serif;
@@ -283,9 +287,23 @@ nav h1 a {
 }
 
 .restaurant-details {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+#restaurant-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.rest-img-cusine-holder, .addres-hours-holder {
+  width: 400px;
 }
 
 #restaurant-name {
@@ -295,15 +313,21 @@ nav h1 a {
   letter-spacing: 0;
   text-transform: uppercase;
   line-height: 1.1;
+  width: 100%;
 }
 
-#restaurant-name, #reviews-container h2{
-	font-size: 24px;
-	margin: 10px 0;
+#restaurant-name, #reviews-container h2 {
+  font-size: 24px;
+  margin: 10px 0;
 }
 
 #restaurant-img, #restaurant-cuisine {
   width: 100%;
+}
+
+.addres-hours-holder {
+  background: #fff;
+  padding: 30px;
 }
 
 #restaurant-address {
@@ -317,24 +341,13 @@ nav h1 a {
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
-  margin: 0 0 20px;
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
 }
 
-#restaurant-container{
-	max-width: 400px;
-}
-
 #reviews-container {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 560px;
-}
-
-#reviews-container {
-  padding: 0 20px;
+  padding: 20px 0;
 }
 
 #reviews-container h2 {
@@ -356,7 +369,6 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
 }
 
 #reviews-list li p {
