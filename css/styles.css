@@ -375,6 +375,17 @@ nav h1 a {
 
 /* ====================== Reponsive designs ====================== */
 
+@media only screen and (max-width: 900px) {
+  /* Restaurant Details */
+  .restaurant-details{
+    max-width: 600px;
+  }
+
+  .rest-img-cusine-holder, .addres-hours-holder{
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 730px) {
   /* Restaurant Listing */
   #restaurants-list li {
