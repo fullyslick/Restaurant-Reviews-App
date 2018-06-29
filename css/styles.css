@@ -460,11 +460,7 @@ nav h1 a {
 @media only screen and (max-width: 900px) {
   /* Restaurant Details */
   .restaurant-details {
-    max-width: 600px;
-  }
-  .restaurant-img-holder,
-  .restaurant-specs-holder {
-    width: 100%;
+    max-width: 400px;
   }
 }
 
