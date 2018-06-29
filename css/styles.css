@@ -316,7 +316,7 @@ nav h1 a {
   justify-content: space-between;
 }
 
-.rest-img-cusine-holder, .addres-hours-holder {
+.restaurant-img-holder, .restaurant-specs-holder {
   width: 400px;
 }
 
@@ -343,16 +343,10 @@ nav h1 a {
   border-radius: 30px 0 0 0;
 }
 
-.addres-hours-holder {
+.restaurant-specs-holder {
   background: #fff;
-  padding: 30px;
   border-radius: 0 0 30px 0;
   border: 1px solid #9e9e9e;
-}
-
-#restaurant-address {
-  font-size: 12pt;
-  margin: 10px 0px;
 }
 
 #restaurant-cuisine {
@@ -364,6 +358,27 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+#restaurant-address {
+  font-size: 16px;
+  padding: 20px 30px 0 30px;
+}
+
+#restaurant-hours {
+  padding: 10px 30px;
+}
+
+#restaurant-hours td {
+  color: #666;
+}
+
+#restaurant-hours tr {
+  vertical-align: baseline;
+}
+
+#reviews-list p {
+  padding: 10px 20px;
 }
 
 #reviews-container {
@@ -390,18 +405,6 @@ nav h1 a {
   position: relative;
   border-radius: 20px 0;
   border: 1px solid #9e9e9e;
-}
-
-#restaurant-hours td {
-  color: #666;
-}
-
-#restaurant-hours tr {
-  vertical-align: baseline;
-}
-
-#reviews-list p {
-  padding: 10px 20px;
 }
 
 .name-date-holder {
@@ -452,15 +455,8 @@ nav h1 a {
   .restaurant-details {
     max-width: 600px;
   }
-  .rest-img-cusine-holder, .addres-hours-holder {
+  .restaurant-img-holder, .restaurant-specs-holder {
     width: 100%;
-  }
-  .#restaurant-cuisine {
-    border: 1px solid #9e9e9e;
-    border-bottom: none;
-  }
-  .addres-hours-holder {
-    border-top: none;
   }
 }
 
@@ -498,10 +494,10 @@ nav h1 a {
     width: 100%;
   }
   /* Restaurant Details */
-  .restaurant-details{
+  .restaurant-details {
     padding: 30px 15px 0 15px;
   }
-  .addres-hours-holder {
+  .restaurant-specs-holder {
     padding: 10px;
   }
 }
