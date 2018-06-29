@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: 0;
@@ -196,8 +195,15 @@ nav h1 a {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -281,8 +287,15 @@ nav h1 a {
 }
 
 .restaurant-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 960px;
   margin: 0 auto;
@@ -291,8 +304,15 @@ nav h1 a {
 
 #restaurant-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -377,11 +397,10 @@ nav h1 a {
 
 @media only screen and (max-width: 900px) {
   /* Restaurant Details */
-  .restaurant-details{
+  .restaurant-details {
     max-width: 600px;
   }
-
-  .rest-img-cusine-holder, .addres-hours-holder{
+  .rest-img-cusine-holder, .addres-hours-holder {
     width: 100%;
   }
 }
