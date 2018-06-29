@@ -339,7 +339,7 @@ nav h1 a {
   width: 100%;
 }
 
-#restaurant-img{
+#restaurant-img {
   border-radius: 30px 0 0 0;
 }
 
@@ -347,6 +347,7 @@ nav h1 a {
   background: #fff;
   padding: 30px;
   border-radius: 0 0 30px 0;
+  border: 1px solid #9e9e9e;
 }
 
 #restaurant-address {
@@ -386,22 +387,63 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
   position: relative;
-}
-
-#reviews-list li p {
-  margin: 0 0 10px;
+  border-radius: 20px 0;
+  border: 1px solid #9e9e9e;
 }
 
 #restaurant-hours td {
   color: #666;
 }
 
-#restaurant-hours tr{
+#restaurant-hours tr {
   vertical-align: baseline;
 }
 
+#reviews-list p {
+  padding: 10px 20px;
+}
+
+.name-date-holder {
+  background: #333;
+  display: table;
+  width: 100%;
+}
+
+.name-date-holder p {
+  display: table-cell;
+}
+
+.reviewer-name {
+  font-size: 22px;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+}
+
+.review-date {
+  text-align: right;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #eaeaea;
+}
+
+.review-rating {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #FF9800;
+  display: inline-block;
+  color: #fff;
+  margin: 20px 20px 0 20px;
+  border-radius: 5px;
+}
+
+.review-comments {
+  font: 16px/1.6 Arial, Helvetica, sans-serif;
+  margin: 10px 0 20px 0;
+}
+
+/*
 
 /* ====================== Reponsive designs ====================== */
 
@@ -412,6 +454,13 @@ nav h1 a {
   }
   .rest-img-cusine-holder, .addres-hours-holder {
     width: 100%;
+  }
+  .#restaurant-cuisine {
+    border: 1px solid #9e9e9e;
+    border-bottom: none;
+  }
+  .addres-hours-holder {
+    border-top: none;
   }
 }
 
@@ -447,5 +496,12 @@ nav h1 a {
   /* Restaurant Filtering */
   .filter-options select {
     width: 100%;
+  }
+  /* Restaurant Details */
+  .restaurant-details{
+    padding: 30px 15px 0 15px;
+  }
+  .addres-hours-holder {
+    padding: 10px;
   }
 }
