@@ -181,7 +181,7 @@ nav h1 a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  background-color: #3397DB;
+  background-color: #3397db;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -190,7 +190,7 @@ nav h1 a {
 
 .filter-options h2 {
   display: inline;
-  color: white;
+  color: #fff;
   font-size: 18px;
   font-weight: normal;
   line-height: 1;
@@ -198,7 +198,7 @@ nav h1 a {
 }
 
 .filter-options select {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #fff;
   font-family: Arial, sans-serif;
   font-size: 18px;
@@ -460,7 +460,7 @@ nav h1 a {
 .review-rating {
   text-transform: uppercase;
   font-weight: bold;
-  background: #FF9800;
+  background: #ff9800;
   display: inline-block;
   color: #fff;
   margin: 20px 20px 0 20px;
