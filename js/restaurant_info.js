@@ -120,7 +120,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
    * Holds the current tab index,
    * it will be used to assign tabindex properly to all reviews
    */
-   let tabIndex = 2;
+  let tabIndex = 2;
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -135,8 +135,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     // so the next tabIndex value will be set to reviews's list
     tabIndex += 1;
 
+    setTabIndexToMap(tabIndex);
   });
   container.appendChild(ul);
+
+
 }
 
 /**
@@ -199,4 +202,14 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+/*
+ * Set tab index to map section,
+ * to enable screen readers, read its aira-label: Area map
+ */
+setTabIndexToMap = (tabIndex) => {
+  console.log(tabIndex);
+  let map = document.getElementById('map-container');
+  map.setAttribute('tabindex', tabIndex);
 }

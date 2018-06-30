@@ -204,7 +204,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 /*
  * Set tab index to map section,
- * to enable screen readers, read its aira-label: Area map
+ * to enable screen readers, read its aira-label
  */
 setTabIndexToMap = (tabIndex) =>{
    let map = document.getElementById('map-container');
