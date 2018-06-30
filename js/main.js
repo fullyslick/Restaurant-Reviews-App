@@ -87,6 +87,7 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
+
 }
 
 /**
@@ -144,6 +145,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
     tabIndex += 1;
   });
   addMarkersToMap();
+
+  setTabIndexToMap(tabIndex);
 }
 
 /**
@@ -197,4 +200,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 
+}
+
+/*
+ * Set tab index to map section,
+ * to enable screen readers, read its aira-label: Area map
+ */
+setTabIndexToMap = (tabIndex) =>{
+   let map = document.getElementById('map-container');
+   map.setAttribute('tabindex', tabIndex);
 }
