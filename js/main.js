@@ -2,7 +2,22 @@ let restaurants,
   neighborhoods,
   cuisines
 var newMap
-var markers = []
+var markers = [];
+
+// Register serviceWorker using ES6 immediately invoked function
+(() => {
+  if ('serviceWorker' in navigator) {
+    // Register a service worker hosted in js folder
+    // using the default scope.
+    navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+      console.log('Service worker registrated successfully');
+    }).catch(function(error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+})();
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -206,7 +221,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
  * Set tab index to map section,
  * to enable screen readers, read its aira-label
  */
-setTabIndexToMap = (tabIndex) =>{
-   let map = document.getElementById('map-container');
-   map.setAttribute('tabindex', tabIndex);
+setTabIndexToMap = (tabIndex) => {
+  let map = document.getElementById('map-container');
+  map.setAttribute('tabindex', tabIndex);
 }
