@@ -54,12 +54,49 @@ var filesToCache = [
 
 // When service worker is installing,
 // store the filesToCache in the cache
-self.addEventListener('install', function(event){
+self.addEventListener('install', function(event) {
   console.log('Attempting to install service worker and cache static assets');
   event.waitUntil(
     caches.open(staticCacheName)
     .then(function(cache) {
       return cache.addAll(filesToCache);
+    })
+  );
+});
+
+/*
+ * Serve files from the cache
+ * When request to server is send,
+ * bypass the request if the url matches the one in the cache.
+ * Then serve the files from the cache for that url.
+ */
+self.addEventListener('fetch', function(event) {
+  console.log('Fetch event for ', event.request.url);
+  event.respondWith(
+    // Check the caches for url (event.request),
+    // and then return response from cache
+    caches.match(event.request).then(function(response) {
+
+      // if there is any response (data) in the cache for that url
+      // return that data (response)
+      if (response) {
+        console.log('Found ', event.request.url, ' in cache');
+
+        // Return early returning the response from cache
+        return response;
+      }
+
+      // if there is no response in the cache,
+      // make a request over the network to the server
+      console.log('Network request for ', event.request.url);
+      return fetch(event.request)
+
+      // TODO 4 - Add fetched files to the cache
+
+    }).catch(function(error) {
+
+      // TODO 6 - Respond with custom offline page
+
     })
   );
 });
