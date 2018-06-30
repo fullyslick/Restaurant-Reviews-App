@@ -116,6 +116,12 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
+  /*
+   * Holds the current tab index,
+   * it will be used to assign tabindex properly to all reviews
+   */
+   let tabIndex = 2;
+
   if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
@@ -124,7 +130,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   }
   const ul = document.getElementById('reviews-list');
   reviews.forEach(review => {
-    ul.appendChild(createReviewHTML(review));
+    ul.appendChild(createReviewHTML(review, tabIndex));
+    // Increment the tabindex,
+    // so the next tabIndex value will be set to reviews's list
+    tabIndex += 1;
+
   });
   container.appendChild(ul);
 }
@@ -132,12 +142,14 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
-createReviewHTML = (review) => {
+createReviewHTML = (review, tabIndex) => {
   // Div that will hold reviewer-name & review-date
   const nameDateHolder = document.createElement('div');
   nameDateHolder.className = "name-date-holder";
 
   const li = document.createElement('li');
+  // Add tabindex attribute to the review's list
+  li.setAttribute('tabindex', tabIndex);
   const name = document.createElement('p');
   name.className = "reviewer-name";
   name.innerHTML = review.name;
