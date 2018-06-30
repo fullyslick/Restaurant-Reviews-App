@@ -146,8 +146,14 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
+  // Holds the current tab index,
+  // it will be used to assign tabindex properly to all listings
+  let tabIndex = 3;
   restaurants.forEach(restaurant => {
-    ul.append(createRestaurantHTML(restaurant));
+    ul.append(createRestaurantHTML(restaurant, tabIndex));
+    // Increment the tabindex,
+    // so the next tabIndex value will be set to listing's anchor
+    tabIndex += 1;
   });
   addMarkersToMap();
 }
@@ -155,7 +161,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML.
  */
-createRestaurantHTML = (restaurant) => {
+createRestaurantHTML = (restaurant, tabIndex) => {
   const li = document.createElement('li');
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -177,6 +183,8 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('a');
+  // Add tabindex attribute to the listing anchor
+  more.setAttribute('tabIndex', tabIndex);
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
