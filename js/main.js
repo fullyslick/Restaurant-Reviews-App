@@ -7,10 +7,10 @@ var markers = [];
 // Register serviceWorker using ES6 immediately invoked function
 (() => {
   if ('serviceWorker' in navigator) {
-    // Register a service worker hosted in js folder
-    // using the default scope.
-    navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
-      console.log('Service worker registrated successfully');
+    // Register a service worker in root directory,
+    // with the default scope
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('Service worker registrated successfully', registration);
     }).catch(function(error) {
       console.log('Service worker registration failed:', error);
     });
