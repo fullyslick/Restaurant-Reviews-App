@@ -92,7 +92,7 @@ section {
 
 /* Outlining of focus elements */
 select:focus, img:focus, #map-container a:focus, a:focus{
-  outline: 2px solid red;
+  outline: 2px solid orange;
 }
 
 /* ====================== Navigation ====================== */
