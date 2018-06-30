@@ -185,6 +185,8 @@ createRestaurantHTML = (restaurant, tabIndex) => {
   const more = document.createElement('a');
   // Add tabindex attribute to the listing anchor
   more.setAttribute('tabIndex', tabIndex);
+  // Add aria label to describe the anchor to voice readers
+  more.setAttribute('aria-label', `View details for the ${restaurant.name} restaurant`);
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
