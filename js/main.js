@@ -10,7 +10,7 @@ var markers = [];
     // Register a service worker in root directory,
     // with the default scope
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      console.log('Service worker registrated successfully', registration);
+      console.log('Service worker registrated successfully');
     }).catch(function(error) {
       console.log('Service worker registration failed:', error);
     });
