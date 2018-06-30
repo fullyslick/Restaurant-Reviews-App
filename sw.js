@@ -1,4 +1,4 @@
-// The name of the cache store in variable
+// The name of the cache stored in variable
 let staticCacheName = 'restaurant-app-page-cache-v1';
 
 // Files that should be stored
