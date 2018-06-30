@@ -90,8 +90,9 @@ section {
   width: 100%;
 }
 
-select:focus{
-  outline: 1px solid #3397db;
+/* Outlining of focus elements */
+select:focus, img:focus, #map-container a:focus, a:focus{
+  outline: 2px solid red;
 }
 
 /* ====================== Navigation ====================== */
