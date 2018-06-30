@@ -209,7 +209,6 @@ getParameterByName = (name, url) => {
  * to enable screen readers, read its aira-label: Area map
  */
 setTabIndexToMap = (tabIndex) => {
-  console.log(tabIndex);
   let map = document.getElementById('map-container');
   map.setAttribute('tabindex', tabIndex);
 }

@@ -66,7 +66,7 @@ self.addEventListener('install', function(event) {
 
 /*
  * Serve files from the cache
- * When request to server is send,
+ * When request to server is sent,
  * bypass the request if the url matches the one in the cache.
  * Then serve the files from the cache for that url.
  */
@@ -82,21 +82,13 @@ self.addEventListener('fetch', function(event) {
       if (response) {
         console.log('Found ', event.request.url, ' in cache');
 
-        // Return early returning the response from cache
         return response;
       }
 
       // if there is no response in the cache,
       // make a request over the network to the server
       console.log('Network request for ', event.request.url);
-      return fetch(event.request)
-
-      // TODO 4 - Add fetched files to the cache
-
-    }).catch(function(error) {
-
-      // TODO 6 - Respond with custom offline page
-
+      return fetch(event.request);
     })
   );
 });
