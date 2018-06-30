@@ -90,6 +90,10 @@ section {
   width: 100%;
 }
 
+select:focus{
+  outline: 1px solid #3397db;
+}
+
 /* ====================== Navigation ====================== */
 
 nav {
