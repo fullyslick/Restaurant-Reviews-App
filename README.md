@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="example-1.png" alt="Reviews AppProject Photo Example" />
+  <img src="example-2.png" alt="Reviews AppProject Photo Example" />
+</p>
+
 #About
 This is my Reviews App Stage 1 project submission for Udacity Frontend Nanodegree program.
 
